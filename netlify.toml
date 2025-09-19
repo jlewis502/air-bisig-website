@@ -5,6 +5,13 @@
 [build.environment]
   NODE_VERSION = "18"
 
+# Specific page redirects first (higher priority)
+[[redirects]]
+  from = "/success"
+  to = "/success/index.html"
+  status = 200
+
+# Catch-all redirect for SPA (lower priority)
 [[redirects]]
   from = "/*"
   to = "/index.html"
