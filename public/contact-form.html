@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Form - Hidden</title>
+</head>
+<body style="display: none;">
+  <!-- Hidden form for Netlify detection -->
+  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text" name="firstName" />
+    <input type="text" name="lastName" />
+    <input type="email" name="email" />
+    <input type="tel" name="phone" />
+    <select name="service">
+      <option value="real-estate">Real Estate Photography/Video</option>
+      <option value="advertising">Advertising & Marketing</option>
+      <option value="inspections">Property Inspections</option>
+      <option value="construction">Construction Documentation</option>
+      <option value="events">Event Coverage</option>
+      <option value="other">Other</option>
+    </select>
+    <textarea name="message"></textarea>
+  </form>
+</body>
+</html>
