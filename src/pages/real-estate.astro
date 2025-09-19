@@ -1,0 +1,229 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import ContactForm from '../components/ContactForm.astro';
+---
+
+<Layout 
+  title="Real Estate Aerial Photography - Air Bisig Drone Services" 
+  description="Professional aerial photography and videography for real estate listings. Showcase properties with stunning drone footage that sells homes faster."
+>
+  <Navigation />
+  
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 overflow-hidden pt-16">
+    <div class="absolute inset-0 opacity-20">
+      <div class="absolute inset-0" style="background-image: radial-gradient(circle at 25% 25%, white 2px, transparent 2px); background-size: 40px 40px;"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="mb-8">
+        <div class="inline-flex items-center justify-center w-24 h-24 bg-white rounded-full mb-6 shadow-xl">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" class="text-blue-600">
+            <path d="M24 4L6 14v20l18 10 18-10V14L24 4z" stroke="currentColor" stroke-width="2" fill="none"/>
+            <path d="M24 4v40" stroke="currentColor" stroke-width="2"/>
+            <path d="M6 14l18 10 18-10" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </div>
+        
+        <h1 class="text-5xl md:text-7xl font-bold text-white mb-4">
+          Real Estate
+        </h1>
+        <p class="text-xl md:text-2xl text-white/90 font-light mb-2">
+          Aerial Photography & Video
+        </p>
+        <p class="text-lg md:text-xl text-white/80 mb-8">
+          Showcase Properties from Every Angle
+        </p>
+      </div>
+
+      <div class="mb-12">
+        <h2 class="text-2xl md:text-4xl font-bold text-white mb-6">
+          Sell Homes Faster with Stunning Aerial Views
+        </h2>
+        <p class="text-lg text-white/90 mb-8 max-w-3xl mx-auto">
+          Give potential buyers the complete picture with professional drone photography and videography. 
+          Highlight property features, neighborhood context, and outdoor spaces that ground-level photos simply can't capture.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a 
+            href="#contact" 
+            class="bg-white text-blue-700 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg"
+          >
+            Get Quote for Listing
+          </a>
+          <a 
+            href="tel:502-583-0333" 
+            class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-700 transition-colors"
+          >
+            Call: 502-583-0333
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="absolute bottom-0 left-0 right-0">
+      <svg viewBox="0 0 1440 120" fill="none" class="w-full h-20">
+        <path d="M0,64L1440,32L1440,120L0,120Z" fill="white"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">
+          Why Realtors Choose Air Bisig
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Professional aerial photography that makes listings stand out and sells properties faster.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="text-center p-6">
+          <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.031 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Faster Sales</h3>
+          <p class="text-gray-600">Listings with aerial photos sell 68% faster than those without professional photography.</p>
+        </div>
+
+        <div class="text-center p-6">
+          <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M12 2l3.09 6.26L22 9l-5 4.87L18.18 21 12 17.77 5.82 21 7 13.87 2 9l6.91-.74L12 2z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Premium Listings</h3>
+          <p class="text-gray-600">Stand out on MLS and real estate platforms with stunning aerial perspectives.</p>
+        </div>
+
+        <div class="text-center p-6">
+          <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Higher Value</h3>
+          <p class="text-gray-600">Professional aerial photography can increase perceived property value by up to 15%.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">
+          Real Estate Photography Services
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Comprehensive aerial solutions for every type of property listing.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Residential Properties -->
+        <div class="bg-white rounded-lg shadow-lg p-8">
+          <div class="flex items-center mb-6">
+            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+              <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-semibold text-gray-900">Residential Properties</h3>
+          </div>
+          <ul class="space-y-3 text-gray-600">
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+              Exterior property overviews and aerial shots
+            </li>
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+              Neighborhood context and location highlights
+            </li>
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+              Backyard, pool, and outdoor space showcases
+            </li>
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+              Acreage and land boundary documentation
+            </li>
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+              Twilight and golden hour photography
+            </li>
+          </ul>
+        </div>
+
+        <!-- Commercial Properties -->
+        <div class="bg-white rounded-lg shadow-lg p-8">
+          <div class="flex items-center mb-6">
+            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+              <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm3 2h2v4H7V6zm5 0h2v4h-2V6zm-5 6h2v2H7v-2zm5 0h2v2h-2v-2z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-semibold text-gray-900">Commercial Properties</h3>
+          </div>
+          <ul class="space-y-3 text-gray-600">
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+              Office buildings and retail spaces
+            </li>
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+              Industrial and warehouse facilities
+            </li>
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+              Development sites and land parcels
+            </li>
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+              Parking and accessibility documentation
+            </li>
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+              Multi-unit residential complexes
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Pricing Info -->
+      <div class="mt-16 text-center">
+        <div class="bg-blue-50 rounded-lg p-8 max-w-4xl mx-auto">
+          <h3 class="text-2xl font-semibold text-gray-900 mb-4">Simple, Transparent Pricing</h3>
+          <p class="text-gray-600 mb-6">
+            Starting at $150 for basic aerial photography packages. Volume discounts available for multiple listings.
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+            <div class="text-center">
+              <div class="font-semibold text-gray-900">Basic Package</div>
+              <div class="text-gray-600">10-15 high-res photos</div>
+            </div>
+            <div class="text-center">
+              <div class="font-semibold text-gray-900">Premium Package</div>
+              <div class="text-gray-600">Photos + 2-3 minute video</div>
+            </div>
+            <div class="text-center">
+              <div class="font-semibold text-gray-900">Luxury Package</div>
+              <div class="text-gray-600">Full photo + video suite</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <ContactForm />
+</Layout>

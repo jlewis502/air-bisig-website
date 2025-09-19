@@ -1,0 +1,124 @@
+---
+// Video Gallery component for showcasing drone work
+---
+
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">
+        Our Work in Action
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        See the stunning aerial perspectives we create for our clients across real estate, advertising, and inspection projects.
+      </p>
+    </div>
+
+    <!-- Video Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Video 1 - Real Estate -->
+      <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+        <div class="aspect-video bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center">
+          <!-- Placeholder for video -->
+          <div class="text-center">
+            <div class="w-16 h-16 mx-auto mb-4 bg-orange-500 rounded-full flex items-center justify-center">
+              <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/>
+              </svg>
+            </div>
+            <p class="text-orange-700 font-medium">Real Estate Showcase</p>
+            <p class="text-sm text-orange-600 mt-1">Luxury Home Tour</p>
+          </div>
+        </div>
+        
+        <!-- Overlay with info -->
+        <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+          <div class="text-white text-center">
+            <h3 class="text-xl font-semibold mb-2">Luxury Real Estate</h3>
+            <p class="text-sm mb-4">Stunning aerial views showcasing property features</p>
+            <button class="bg-orange-500 text-white px-6 py-2 rounded-lg hover:bg-orange-600 transition-colors">
+              Watch Video
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 2 - Commercial -->
+      <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+        <div class="aspect-video bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
+          <!-- Placeholder for video -->
+          <div class="text-center">
+            <div class="w-16 h-16 mx-auto mb-4 bg-blue-500 rounded-full flex items-center justify-center">
+              <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/>
+              </svg>
+            </div>
+            <p class="text-blue-700 font-medium">Commercial Project</p>
+            <p class="text-sm text-blue-600 mt-1">Brand Advertisement</p>
+          </div>
+        </div>
+        
+        <!-- Overlay with info -->
+        <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+          <div class="text-white text-center">
+            <h3 class="text-xl font-semibold mb-2">Commercial Advertising</h3>
+            <p class="text-sm mb-4">Dynamic aerial footage for marketing campaigns</p>
+            <button class="bg-orange-500 text-white px-6 py-2 rounded-lg hover:bg-orange-600 transition-colors">
+              Watch Video
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 3 - Inspection -->
+      <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 md:col-span-2 lg:col-span-1">
+        <div class="aspect-video bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
+          <!-- Placeholder for video -->
+          <div class="text-center">
+            <div class="w-16 h-16 mx-auto mb-4 bg-green-500 rounded-full flex items-center justify-center">
+              <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/>
+              </svg>
+            </div>
+            <p class="text-green-700 font-medium">Property Inspection</p>
+            <p class="text-sm text-green-600 mt-1">Roof Assessment</p>
+          </div>
+        </div>
+        
+        <!-- Overlay with info -->
+        <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+          <div class="text-white text-center">
+            <h3 class="text-xl font-semibold mb-2">Inspection Services</h3>
+            <p class="text-sm mb-4">Detailed aerial inspections and documentation</p>
+            <button class="bg-orange-500 text-white px-6 py-2 rounded-lg hover:bg-orange-600 transition-colors">
+              Watch Video
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="text-center mt-16">
+      <p class="text-lg text-gray-600 mb-6">
+        Ready to create stunning aerial content for your project?
+      </p>
+      <a 
+        href="#contact" 
+        class="inline-flex items-center bg-orange-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-orange-600 transition-colors shadow-lg hover:shadow-xl transform hover:scale-105"
+      >
+        Start Your Project
+        <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Custom styles for video gallery interactions */
+  .group:hover .aspect-video {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+</style>

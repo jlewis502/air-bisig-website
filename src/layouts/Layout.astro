@@ -5,6 +5,7 @@ export interface Props {
 }
 
 const { title, description = "Professional aerial photography and videography services for real estate, advertising, and inspections." } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
@@ -13,6 +14,55 @@ const { title, description = "Professional aerial photography and videography se
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Meta Tags -->
+    <link rel="canonical" href={canonicalURL} />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Air Bisig Drone Services" />
+    <meta name="keywords" content="drone photography, aerial videography, real estate drone, Louisville drone services, property inspection, commercial drone, advertising drone video" />
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:site_name" content="Air Bisig Drone Services" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    
+    <!-- Business Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Air Bisig Drone Services",
+      "description": "Professional aerial photography and videography services",
+      "telephone": "502-583-0333",
+      "email": "contact@airbisig.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Louisville",
+        "addressRegion": "KY",
+        "addressCountry": "US"
+      },
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 38.2526,
+          "longitude": -85.7585
+        },
+        "geoRadius": 50000
+      },
+      "priceRange": "$$",
+      "openingHours": "Mo-Sa 08:00-18:00",
+      "sameAs": []
+    }
+    </script>
+    
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
