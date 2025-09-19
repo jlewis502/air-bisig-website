@@ -14,21 +14,21 @@
     </div>
 
     <!-- Video Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="video-gallery">
       <!-- Video 1 -->
       <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
         <video 
-          class="w-full h-full object-cover aspect-video" 
+          class="w-full h-full object-cover aspect-video video-player" 
           controls 
-          poster="/videos/78819_bisig_air_clip_01.mp4"
           preload="metadata"
+          data-video-id="1"
         >
           <source src="/videos/78819_bisig_air_clip_01.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
         
         <!-- Overlay with info -->
-        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 pointer-events-none">
           <h3 class="text-white font-semibold">Demo Reel #1</h3>
           <p class="text-white/80 text-sm">Professional aerial cinematography</p>
         </div>
@@ -37,17 +37,17 @@
       <!-- Video 2 -->
       <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
         <video 
-          class="w-full h-full object-cover aspect-video" 
+          class="w-full h-full object-cover aspect-video video-player" 
           controls 
-          poster="/videos/78819_bisig_air_clip_02.mp4"
           preload="metadata"
+          data-video-id="2"
         >
           <source src="/videos/78819_bisig_air_clip_02.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
         
         <!-- Overlay with info -->
-        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 pointer-events-none">
           <h3 class="text-white font-semibold">Demo Reel #2</h3>
           <p class="text-white/80 text-sm">Dynamic aerial perspectives</p>
         </div>
@@ -56,17 +56,17 @@
       <!-- Video 3 -->
       <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 md:col-span-2 lg:col-span-1">
         <video 
-          class="w-full h-full object-cover aspect-video" 
+          class="w-full h-full object-cover aspect-video video-player" 
           controls 
-          poster="/videos/78819_bisig_air_clip_03.mp4"
           preload="metadata"
+          data-video-id="3"
         >
           <source src="/videos/78819_bisig_air_clip_03.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
         
         <!-- Overlay with info -->
-        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 pointer-events-none">
           <h3 class="text-white font-semibold">Demo Reel #3</h3>
           <p class="text-white/80 text-sm">Stunning aerial footage showcase</p>
         </div>
@@ -98,3 +98,21 @@
     transition: transform 0.3s ease;
   }
 </style>
+
+<script>
+  // Single video play functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const videos = document.querySelectorAll('.video-player');
+    
+    videos.forEach(video => {
+      video.addEventListener('play', function() {
+        // Pause all other videos when this one starts playing
+        videos.forEach(otherVideo => {
+          if (otherVideo !== video) {
+            otherVideo.pause();
+          }
+        });
+      });
+    });
+  });
+</script>
