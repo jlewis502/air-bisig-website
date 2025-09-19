@@ -2,45 +2,22 @@
 // Hero component for Air Bisig
 ---
 
-<section class="relative h-screen flex items-center justify-center bg-gradient-to-br from-orange-400 via-orange-500 to-orange-600 overflow-hidden pt-20 md:pt-24">
+<section class="relative h-screen flex items-center justify-center bg-gradient-to-br from-orange-400 via-orange-500 to-orange-600 overflow-hidden pt-16">
   <!-- Background pattern -->
   <div class="absolute inset-0 opacity-20">
     <div class="absolute inset-0" style="background-image: radial-gradient(circle at 25% 25%, white 2px, transparent 2px); background-size: 40px 40px;"></div>
   </div>
 
-  <!-- Drone icon background -->
-  <div class="absolute top-20 right-10 opacity-10 hidden lg:block">
-    <svg width="200" height="200" viewBox="0 0 200 200" fill="currentColor" class="text-white">
-      <circle cx="100" cy="100" r="30" stroke="currentColor" stroke-width="3" fill="none"/>
-      <!-- Simplified drone shape -->
-      <circle cx="60" cy="60" r="15" />
-      <circle cx="140" cy="60" r="15" />
-      <circle cx="60" cy="140" r="15" />
-      <circle cx="140" cy="140" r="15" />
-      <line x1="75" y1="75" x2="85" y2="85" stroke="currentColor" stroke-width="2"/>
-      <line x1="115" y1="85" x2="125" y2="75" stroke="currentColor" stroke-width="2"/>
-      <line x1="75" y1="125" x2="85" y2="115" stroke="currentColor" stroke-width="2"/>
-      <line x1="115" y1="115" x2="125" y2="125" stroke="currentColor" stroke-width="2"/>
-    </svg>
-  </div>
 
   <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
     <!-- Logo/Brand -->
     <div class="mb-8">
-      <div class="inline-flex items-center justify-center w-24 h-24 bg-white rounded-full mb-6 shadow-xl">
-        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" class="text-orange-500">
-          <circle cx="24" cy="24" r="12" stroke="currentColor" stroke-width="2" fill="none"/>
-          <!-- Simplified drone propellers -->
-          <circle cx="12" cy="12" r="6" fill="currentColor"/>
-          <circle cx="36" cy="12" r="6" fill="currentColor"/>
-          <circle cx="12" cy="36" r="6" fill="currentColor"/>
-          <circle cx="36" cy="36" r="6" fill="currentColor"/>
-          <!-- Connection lines -->
-          <line x1="18" y1="18" x2="20" y2="20" stroke="currentColor" stroke-width="1"/>
-          <line x1="28" y1="20" x2="30" y2="18" stroke="currentColor" stroke-width="1"/>
-          <line x1="18" y1="30" x2="20" y2="28" stroke="currentColor" stroke-width="1"/>
-          <line x1="28" y1="28" x2="30" y2="30" stroke="currentColor" stroke-width="1"/>
-        </svg>
+      <div class="mb-6">
+        <img 
+          src="/images/air-bisig-logo.png" 
+          alt="Air Bisig Drone Services" 
+          class="h-32 w-auto mx-auto md:h-40 lg:h-48 max-w-none"
+        />
       </div>
       
       <h1 class="text-5xl md:text-7xl font-bold text-white mb-4">
