@@ -16,7 +16,7 @@
     <!-- Video Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="video-gallery">
       <!-- Video 1 -->
-      <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+      <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 video-container">
         <video 
           class="w-full h-full object-cover aspect-video video-player" 
           controls 
@@ -28,14 +28,14 @@
         </video>
         
         <!-- Overlay with info -->
-        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 pointer-events-none">
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-4 pointer-events-none z-10">
           <h3 class="text-white font-semibold">Demo Reel #1</h3>
-          <p class="text-white/80 text-sm">Professional aerial cinematography</p>
+          <p class="text-white/90 text-sm">Professional aerial cinematography</p>
         </div>
       </div>
 
       <!-- Video 2 -->
-      <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+      <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 video-container">
         <video 
           class="w-full h-full object-cover aspect-video video-player" 
           controls 
@@ -47,14 +47,14 @@
         </video>
         
         <!-- Overlay with info -->
-        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 pointer-events-none">
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-4 pointer-events-none z-10">
           <h3 class="text-white font-semibold">Demo Reel #2</h3>
-          <p class="text-white/80 text-sm">Dynamic aerial perspectives</p>
+          <p class="text-white/90 text-sm">Dynamic aerial perspectives</p>
         </div>
       </div>
 
       <!-- Video 3 -->
-      <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 md:col-span-2 lg:col-span-1">
+      <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 md:col-span-2 lg:col-span-1 video-container">
         <video 
           class="w-full h-full object-cover aspect-video video-player" 
           controls 
@@ -66,9 +66,9 @@
         </video>
         
         <!-- Overlay with info -->
-        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 pointer-events-none">
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-4 pointer-events-none z-10">
           <h3 class="text-white font-semibold">Demo Reel #3</h3>
-          <p class="text-white/80 text-sm">Stunning aerial footage showcase</p>
+          <p class="text-white/90 text-sm">Stunning aerial footage showcase</p>
         </div>
       </div>
     </div>
@@ -98,19 +98,32 @@
     transition: transform 0.3s ease;
   }
   
-  /* Brighten video thumbnails */
+  /* Brighten video thumbnails significantly */
   .video-player {
-    filter: brightness(1.3) contrast(1.1);
+    filter: brightness(1.8) contrast(1.3) saturate(1.2);
     transition: filter 0.3s ease;
   }
   
   .video-player:hover {
-    filter: brightness(1.1) contrast(1.0);
+    filter: brightness(1.6) contrast(1.2) saturate(1.1);
   }
   
   /* When video is playing, remove filters */
   .video-player[data-playing="true"] {
     filter: none;
+  }
+  
+  /* Add subtle overlay to improve text readability */
+  .video-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+    pointer-events: none;
+    z-index: 1;
   }
 </style>
 
