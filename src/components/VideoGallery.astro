@@ -97,10 +97,25 @@
     transform: scale(1.05);
     transition: transform 0.3s ease;
   }
+  
+  /* Brighten video thumbnails */
+  .video-player {
+    filter: brightness(1.3) contrast(1.1);
+    transition: filter 0.3s ease;
+  }
+  
+  .video-player:hover {
+    filter: brightness(1.1) contrast(1.0);
+  }
+  
+  /* When video is playing, remove filters */
+  .video-player[data-playing="true"] {
+    filter: none;
+  }
 </style>
 
 <script>
-  // Single video play functionality
+  // Single video play functionality and filter management
   document.addEventListener('DOMContentLoaded', function() {
     const videos = document.querySelectorAll('.video-player');
     
@@ -110,8 +125,19 @@
         videos.forEach(otherVideo => {
           if (otherVideo !== video) {
             otherVideo.pause();
+            otherVideo.removeAttribute('data-playing');
           }
         });
+        // Mark this video as playing for CSS filter control
+        video.setAttribute('data-playing', 'true');
+      });
+      
+      video.addEventListener('pause', function() {
+        video.removeAttribute('data-playing');
+      });
+      
+      video.addEventListener('ended', function() {
+        video.removeAttribute('data-playing');
       });
     });
   });
