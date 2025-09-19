@@ -1,0 +1,80 @@
+---
+// No props needed for now
+---
+
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <a href="/" class="text-2xl font-bold text-orange-500">
+          AIR BISIG
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:block">
+        <div class="ml-10 flex items-baseline space-x-8">
+          <a href="/" class="text-gray-900 hover:text-orange-500 px-3 py-2 text-sm font-medium transition-colors">
+            Home
+          </a>
+          <a href="/real-estate" class="text-gray-700 hover:text-orange-500 px-3 py-2 text-sm font-medium transition-colors">
+            Real Estate
+          </a>
+          <a href="/advertising" class="text-gray-700 hover:text-orange-500 px-3 py-2 text-sm font-medium transition-colors">
+            Advertising
+          </a>
+          <a href="/inspections" class="text-gray-700 hover:text-orange-500 px-3 py-2 text-sm font-medium transition-colors">
+            Inspections
+          </a>
+          <a href="#contact" class="bg-orange-500 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-orange-600 transition-colors">
+            Get Quote
+          </a>
+        </div>
+      </div>
+
+      <!-- Mobile menu button -->
+      <div class="md:hidden">
+        <button type="button" class="mobile-menu-button bg-gray-100 inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-orange-500 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-500">
+          <span class="sr-only">Open main menu</span>
+          <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu hidden md:hidden">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
+      <a href="/" class="text-gray-900 hover:text-orange-500 block px-3 py-2 text-base font-medium">
+        Home
+      </a>
+      <a href="/real-estate" class="text-gray-700 hover:text-orange-500 block px-3 py-2 text-base font-medium">
+        Real Estate
+      </a>
+      <a href="/advertising" class="text-gray-700 hover:text-orange-500 block px-3 py-2 text-base font-medium">
+        Advertising
+      </a>
+      <a href="/inspections" class="text-gray-700 hover:text-orange-500 block px-3 py-2 text-base font-medium">
+        Inspections
+      </a>
+      <a href="#contact" class="bg-orange-500 text-white block px-3 py-2 text-base font-medium rounded-lg mx-3 text-center hover:bg-orange-600">
+        Get Quote
+      </a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  // Mobile menu toggle
+  document.addEventListener('DOMContentLoaded', function() {
+    const button = document.querySelector('.mobile-menu-button');
+    const menu = document.querySelector('.mobile-menu');
+
+    button?.addEventListener('click', () => {
+      menu?.classList.toggle('hidden');
+    });
+  });
+</script>
