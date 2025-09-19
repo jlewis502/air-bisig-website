@@ -1,0 +1,17 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f97316;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ea580c;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#grad1)"/>
+  
+  <!-- Play button -->
+  <circle cx="640" cy="360" r="60" fill="rgba(255,255,255,0.9)"/>
+  <polygon points="620,330 620,390 680,360" fill="#f97316"/>
+  
+  <!-- Text -->
+  <text x="640" y="480" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="32" font-weight="bold">Demo Reel #1</text>
+  <text x="640" y="520" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-family="Arial, sans-serif" font-size="18">Professional Aerial Cinematography</text>
+</svg>
